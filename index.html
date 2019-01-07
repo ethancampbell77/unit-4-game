@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/style.css">
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
 <!-- JQuery CDN -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,29 +24,38 @@
 <div id="siteBox">
 
 <!-- Holds the Heading and Directions -->
-  <div class="header">
-    <h1>Collector Game</h1>
-      <p id="instruction">Player Instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis cum corrupti omnis, assumenda porro in quos sunt incidunt repudiandae tempore fugiat iusto tempora sequi tenetur minima eaque amet placeat modi nam corporis quisquam nisi doloribus rem. Ratione vero, enim sit qui temporibus voluptatem consectetur explicabo reiciendis totam? Reprehenderit, odit voluptatem!</p>
-  </div>
+    <div class="row">
+        <div class="col-12"><h1>Collector Game</h1>
+    </div>     
+        
+    <div class="row">
+        <p class="col-12" id="instruction">Player Instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis cum corrupti omnis, assumenda porro in quos sunt incidunt repudiandae tempore fugiat iusto tempora sequi tenetur minima eaque amet placeat modi nam corporis quisquam nisi doloribus rem. Ratione vero, enim sit qui temporibus voluptatem consectetur explicabo reiciendis totam? Reprehenderit, odit voluptatem!</p>
+    </div>
 
-<!-- Holds the Computer's number and Scorecard -->
-  <div id="playBoxTop">
-    <p id="compNum"></p>
-    <p id="scoreCard"></p>
-  </div>
+<!-- Holds the Computer's number and Scoreboard -->
+    <div class="row">
+        <div class="col-3" id="playBoxTop">
+            <p id="compNum"></p>
+        </div>  
+        
+        <div class="col-9" id="histBox">
+            <p id="wins"></p>
+            <p id="losses"></p>
+        </div>
+    </div> 
 
 <!-- Holds the Number value items to be collected-->
-  <div id="itemBox">
-    <p id="itemNum1"></p>
-    <p id="itemNum2"></p>
-    <p id="itemNum3"></p>
-    <p id="itemNum4"></p>
-  </div>
+    <div class="row" id="itemBox">
+            <img src="assets/images/pink_donut.jpg" class="col-3, items" id="stone1" alt="skull" height="100px" width="100px"></button>
+            <img src="assets/images/choc_donut.jpg" class="col-3, items" id="stone2" alt="hand" height="100px" width="100px">
+            <img src="assets/images/green_donut.jpg" class="col-3, items" id="stone3" alt="femur" height="100px" width="100px">
+            <img src="assets/images/blue_donut.jpg" class="col-3, items" id="stone4" alt="triceratops" height="100px" width="100px">
+    </div> 
 
 <!-- Holds the players/users Value Total -->
-  <div id="playTotal">
-    <p id="userScore"></p>
-  </div>
+    <div class="row" id="scoreBox">
+        <p class="col-12" id="playerTotal"></p>
+    </div>
 
 </div>
 
