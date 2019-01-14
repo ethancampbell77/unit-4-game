@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Unit 4 Game TBD</title>
+    <title>Donut Counter</title>
 
 <!-- CSS Stylesheet & Reset Stylesheet -->
 
@@ -20,41 +20,61 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
+<!-- Opening Music  - No loop, Plays only 1 time *** Getting an error in Chrome BUT this HTML works for Firefox and Safari for sure -->
+<audio src="assets/music/Donut_Theme.m4a" id="themeMusic" autoplay="autoplay"></audio>
+
+<!-- Google Chrome Fix Audio Blocking on load of page-->
+<iframe src="assets/music/Donut_Theme.m4a" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
+
+<!-- Win Tones -->
+<audio id="winMusic" src="assets/music/Donut_Win.m4a"></audio>
+
+<!-- Lose Tones -->
+<audio id="loseMusic" src="assets/music/Donut_Lose.m4a"></audio>
+
 <!-- Holds the full page -->
-<div id="siteBox">
+<div id="pageBox">
 
 <!-- Holds the Heading and Directions -->
-    <div class="row">
-        <div class="col-12"><h1>Collector Game</h1>
+    <div>
+        <div><h1>Donut Counter</h1>
     </div>     
         
-    <div class="row">
-        <p class="col-12" id="instruction">Player Instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis cum corrupti omnis, assumenda porro in quos sunt incidunt repudiandae tempore fugiat iusto tempora sequi tenetur minima eaque amet placeat modi nam corporis quisquam nisi doloribus rem. Ratione vero, enim sit qui temporibus voluptatem consectetur explicabo reiciendis totam? Reprehenderit, odit voluptatem!</p>
+    <div>
+        <ul id="instruction">
+            <li>Pick a donut to place an Order - each Donut is assigned a random number of donuts order upon click</li>
+            <li>Place Orders until you have reached or exceed the total of Donuts made for the day</li>
+            <li>If your total Orders equals the number of Donuts made for the day, good business -  YOU WIN!</li>
+            <li>If you exceed the number of Donuts made, you sold out for the day and bummed some people out -  YOU LOSE!</li>
+        </ul>
     </div>
 
 <!-- Holds the Computer's number and Scoreboard -->
-    <div class="row">
-        <div class="col-3" id="playBoxTop">
+    <div>
+        <div id="topBox">
+            <p id="donutCount">Donuts Made Today:</p>
             <p id="compNum"></p>
         </div>  
         
-        <div class="col-9" id="histBox">
-            <p id="wins"></p>
-            <p id="losses"></p>
+        <div id="compScoreBox">
+            <p id="wins">WINS:</p>
+            <p id="losses">LOSSES:</p>
         </div>
     </div> 
 
-<!-- Holds the Number value items to be collected-->
-    <div class="row" id="itemBox">
-            <img src="assets/images/pink_donut.jpg" class="col-3, items" id="stone1" alt="skull" height="100px" width="100px"></button>
-            <img src="assets/images/choc_donut.jpg" class="col-3, items" id="stone2" alt="hand" height="100px" width="100px">
-            <img src="assets/images/green_donut.jpg" class="col-3, items" id="stone3" alt="femur" height="100px" width="100px">
-            <img src="assets/images/blue_donut.jpg" class="col-3, items" id="stone4" alt="triceratops" height="100px" width="100px">
+ <!-- Holds the Number value items to be collected-->
+    <div id="itemBox">
+            <img src="assets/images/pink_donut.png" class="col-3, items" id="pinkDonut" alt="skull" height="100px" width="100px"></button>
+            <img src="assets/images/choc_donut.png" class="col-3, items" id="chocDonut" alt="hand" height="100px" width="100px">
+            <img src="assets/images/green_donut.png" class="col-3, items" id="greenDonut" alt="femur" height="100px" width="100px">
+            <img src="assets/images/blue_donut.png" class="col-3, items" id="blueDonut" alt="triceratops" height="100px" width="100px">
     </div> 
 
 <!-- Holds the players/users Value Total -->
-    <div class="row" id="scoreBox">
-        <p class="col-12" id="playerTotal"></p>
+    <div id="userScoreBox">
+        <p id="orderCount">Orders Placed Today:</p>
+        <p id="playerTotal"></p>
     </div>
 
 </div>
