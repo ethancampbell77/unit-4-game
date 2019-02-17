@@ -18,3 +18,5 @@ Donut-Hand Image: "Pastry Symbol" by Tvzsu/RawPixel
 
 Donut-Icons: Zazzle
 
+Deployed to GitHub here: https://ethancampbell77.github.io/unit-4-game/
+
